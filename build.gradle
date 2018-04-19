@@ -1,0 +1,30 @@
+group 'com.litecart.gradle'
+version '1.0-SNAPSHOT'
+
+apply plugin: 'java'
+
+sourceCompatibility = 1.8
+
+repositories {
+    mavenCentral()
+    jcenter()
+}
+
+dependencies {
+    compile group: 'org.testng', name: 'testng', version: '6.11'
+
+    // https://mvnrepository.com/artifact/com.codeborne/selenide
+    compile group: 'com.codeborne', name: 'selenide', version: '4.10.01'
+
+    // https://mvnrepository.com/artifact/org.projectlombok/lombok
+    compile group: 'org.projectlombok', name: 'lombok', version: '1.16.20'
+
+    // https://mvnrepository.com/artifact/io.github.bonigarcia/webdrivermanager
+    compile group: 'io.github.bonigarcia', name: 'webdrivermanager', version: '2.1.0'
+}
+
+test {
+    useTestNG()
+}
+
+
